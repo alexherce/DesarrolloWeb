@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 30%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 70%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  [class*="colnopad-"] {
+    float: left;
+  }
+  .colnopad-1 {width: 70%;}
+  .colnopad-2 {width: 30%;}
+
+  html {
+    font-family: "Arial", sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body {
+    background-color: #F4B350;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .content {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .pagecontent {
+    background-color: #FDE3A7;
+  }
+
+  .featured {
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #1F3A93;
+  }
+
+  .testimonials {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 12pt;
+  }
+
+  .header {
+    background-color: #33b5e5;
+    color: #ffffff;
+    padding: 0px;
+  }
+
+  .footer {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #33b5e5;
+    text-align: center;
+    font-size: 10pt;
+    color: white;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu li {
+    padding: 8px;
+    margin-bottom: 0px;
+    background-color: #33b5e5;
+    color: #ffffff;
+  }
+  .menu li:hover {
+    background-color: #0099cc;
+  }
+
+  .menubar ul {
+    display: table;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #1F3A93;
+  }
+  .menubar li {
+    display: table-cell;
+    width: auto;
+    padding: 8px;
+    margin-bottom: 0px;
+    background-color: #1F3A93;
+    color: #ffffff;
+    text-align: center;
+  }
+  .menubar li:hover {
+    background-color: #0099cc;
+  }
+
+  .hero-image {
+    background-image: url("https://www.bgdblog.org/wp-content/uploads/2016/07/1blackwomen-e1434651063387.jpg");
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .testimonialimg {
+    width: 100%;  /* Or whatever */
+    margin: auto;  /* Magic! */
+    border-radius: 50%;
+  }
+  </style>
+
+</head>
+<body>
+
+  <div class="content">
+    <div class="header">
+      <div class="row">
+        <div class="colnopad-1">
+          <div class="hero-image">
+          </div>
+        </div>
+        <div class="colnopad-2 menu">
+          <ul>
+            <li>Home</li>
+            <li>Our Tutors</li>
+            <li>Pricing</li>
+            <li>Testimonials</li>
+            <li>Your Account</li>
+            <li>Chat Online</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="menubar">
+        <ul>
+          <li>Math</li>
+          <li>Science</li>
+          <li>English</li>
+          <li>Languages</li>
+          <li>History</li>
+          <li>Sociology</li>
+          <li>Art</li>
+          <li>Other</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pagecontent">
+      <div class="featured">
+      <div class="row">
+        <div class="col-3">
+          <center>
+            <div class="row">
+              <img class="icon icons8-Graduation-Cap" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABelJREFUaAXtmHmIVlUYh2fcKrXJrBgqC4XECpyMClsgo8gIi6g/wrBUzBZs0TaEFhjoj4Y2mD/KtLIkGpASCyJtwRTMmskxU7IInSUk2txaHFsce57xnjjd+Wbm+765s5E/eDznnvue933Per+xpOSI/j8zcAxDvR/WJVi3bUBpKtluh0OwOcG6bb7r9yonwxow6Z1wAwRZt813r4O2/U6DyOgO2A1/QzWUQVq2+U4bbe1j336hiWTxMTjT9XA+dCVttLWPffXRZxpO5Cr4E36BBTAY8pW29rGvPvSlz17V1URrAGd0JYyBYmVffehLn/rucZ1MhOVg0Ga4DrKSvvSpb2MYK3N5IO+CvfAXPAMjIWvpU9/GMNY8yOwymISzT8GZqoNzoadlDGMZ09jnQNFydp4GZ2cf3A2FHGbMuyVjGdPY5vAUjICCdC3WYb++Qf2Ugnpna2xsc3B1msDcupQ3yAqwUyNMg97WEALeA2+COcwBZS4+m5s5ngrt5DLOh3CnP0l9RDurbBuG4u48uBOWwgfgTXUGHICfYRXEH1hzMje/O265e+Hf7X42DxvBkW6ACshapTgcDzOgGozTAsaU32E1jALlTxn7dCRz1Id9PwPHUFILe8CZyeyqw1fQXCq7ISTt76wv4EW4HbwV3U6FylzN2dxrdeAyDgNnw2VqhSz1K87cNnXg7NWDK9Bdmas5m7tjKBkHa8AZ2wqXQH+XOZqrOZu7Y2iT+3Em/AgHYQkcD/1N5mRu5rgfZkHOs3QCL14Gt9f3MAP6i8zFnMxtHzRCl7oUi23g0r0PXol9JWObg7mYk7mthLwGgl3bIXqU0iX0qrTuweotGcuYxk7HL2ggIWFnJBysMCPhXU+V8Y7YQpD0jmg3kHy+G9txtAP86o+GteA58jxlrXBG1+LYWMZsAHPIRJvwsh68NV4Abw1vuJmQ89agvRClb83FdDaWMY2dVrsVSRt09Ozvnpro5cXUt4AHcA1MgGJlX33oS5/6DjKmsdMqaiD+UDNIVcqbP/oWgl9pv6yVcBTkK20rwb760Jc+YxnT2OYQq6iBnIUHnc2LPUX1cdTfBW2+hsuhK2mjrX3sq49cMqY25hCrqIFchQedTYs95ajfSNt30ArL4CRIyzbfaaOtfTqTMY1tDrGKGshteNDZxNhTB/XjaH8OvAzc23OgNMG6bb7TRtuuZExjm0OsogbyOB50FgKbWHz1+ivUGybWZB42g/0aEqzbdiHEsq8+gvRtDGVM+5lDkO/eg50wLDTmUy7DSGfh/5mcnV0QDvZj1HdAWkNocBXeTrBuW1r21YfSp77DChjT2OagyuAdsE285cZCXvoIKzudmVhXJs/+LaAWQUtb7fA/F1BcHz2nq77TJsi++lD6NFYlKGP6bA7qSvC5Gh5M6g9R5iVnrBHCFejf0K9B2A46d88HvUWlKTxQuhUkqImKNkH21YfSp77D3+nGNHZY8cuoOxB/CVck9QWUeckZW5qX5WGj9ECepVmCmqjEAwntHZXGDit+DXUHEuMPy//MlM+5VEfjOHgJ/kgM9lM2g7MlP0GQ26Ec1iUNnyTlRUk5hfIH8DsSdCIVY8hYGA7KMzMXjDEZ9DUB3FpqOoyG8T50JZdwNRzqhG28uxUMnFZ6RcL7oVRmwVbozLexzWFqYvcAZdAVVOyb9zmx47EwKuE0Sj9WD8NyaAYdetWmD3opbRLLLfIN2Odb0McjYPvpEOIYM2gxlQNQFhqS8ivK2lRb0Y+D6HkLeChNzn2d6453FRYlNo2Us2Ew5KP1GH2ew/AV2n7L0d6tpqPpvQQczIcQz95Inlcl716lDOeAal7agNWmHJZOmme2R3QfXg+CM+hHrRw2QisshGJkwm6teLvp50vINUDfZaLpeDHwXtgD3ng3Q7Hy/LjS8yMHU5K2tis4as+8WoHH58FzMamb3j2H9bALxoDb2J8oPnsFDyg5GS3gt60GXCFXfkDqJrL2/DmIJwbkCKKkZ1OvgvT3KTI5Uu3bGfgHdB+I3e3JUAkAAAAASUVORK5CYII=">
+            </div>
+            <div class="row">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </center>
+        </div>
+
+        <div class="col-3">
+          <center>
+            <div class="row">
+              <img class="icon icons8-Computer" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAA0FJREFUaAXtmjtoFFEUhtdHIyi+UyjoaKNBEAKKpYKCCCJRxMYHdj5QSKFoYxFsBBuLELBRbKxEU9gI4io2gqBYWNjEBLWxkKgIPvDxf5M5uzebmZsbi3ks88O/c859nf/ce3dmd2YajS7BHCePRbJ3iWudsjKb4xL3UPzqilwoZ1T8WzGiGe2N+XwI+8R14lVxWKwCTkvkeRHtt03wgAxWI7KCChzRima0N+by0Q2wrZWWy24VXkyrKLDsimI/SIvvS4Qktolv0joWULZBMdE060TQShJ9GCXAS5+GkO/ICg1wVrTVWyP7hGjXoI2yj4qGrTL2m6PjzoRWRB1tDPRlDMCYjE0MQExioyEIaWetpnoyC6dEzg69IhgU8ZfiCNfF77E1+TGiw5jjP5MNDWMyaGOgL2MAxmRsYgBi4qMBLU3REMmg7r/PWnR20em7daF25xidfug4cVZ0jpweTdnMwmLxkDhPBD0i24NtANgGe2Jr8oNtst3xt8iGBupsK1FGX9tKjMnYxADEJDYavCui+hi+rWVtij56Ewn5shedQFD8OpGgacqxUb0iOU52UKh6RYKmKcdG9YrkONlBoeoVCZqmHBvVK5LjZAeFqlckaJpybGT/w7NC8oemP6sy53K0TGTF9CVCpx3ivazOBZS/yorpS+S4OvVldSyonH+JqfAl8lk9Hqf2KmGhnbX+JNp8iZVNvmmNtZvzRCq5izIiPi+b4gw93ORDM9pbt3SwD4oD4iacCuC1NF4T71RAa7hEu8lGj2XiXnE9TgUwKo33xU+uVi42H0T2XJWIZrS37rD3y14lXhKHxCrgjEReFtF+ywTzJWclIiso0RFNPPBc2aGJcjSjvfTPEI9J41vxpvhOdJ+ryG3DriPtkrbFLAy23Vlb/DI4Ir4XGYfxALN4TnyEMwMuqP6GeFJ8KjL7h8Vp8CXyQ60npvUIL/iipr+T5t90tLFI5GdSPtPhlxosEXkpYIGI7wWZEiDytsq/8oBCIp6nWkzEZtEQyUAz2ltnLewy4q5ErRZ7xRfilPdO5LdgW+tjUsJrEcOt2vIY45KyPKGpQisw7bHDHuRKyVJViWhG+5QfjV3xmhNJVRr/AFzMCGgM2s3xAAAAAElFTkSuQmCC">
+            </div>
+            <div class="row">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </center>
+        </div>
+
+        <div class="col-3">
+          <center>
+            <div class="row">
+              <img class="icon icons8-Peptide" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAyBJREFUaAXNmr1rFEEYxqOFINr4QVKIkCbRKBYWGhACaVL6x1jZhNTBQgSFFBZprNIoit82sUoOa0G9Tk2nAQMqiV/P75wlB7p3s/O+M5sHnrvN7by/d2Znd3ZmNyMj8ZpT0U4w27lU5XmoBJM5knQF/R3Mdi7156nyDfu+vz+xNr8S42LCcrJ7+enyVzJHZ0M+JHsLJmxyPJFPydm0KjKJ5jNkWAhscmTXtDLQ/V/kUcdsY2JtybDJUUQrykKv3HTMthSYsItpQpm2g9m26rQAOzJMD16j+tAb9IrHEbwXWJ49HN0Yrg+uE+s5PRMa4X3NRTeEgoxc9ErqKLNPsWuBkWMUFDpOlnGf6+K5zIHIdV+Ka0Uo9TZUhgqlGoZJqVOU/qScHlaZGR4NYZaKPsoXZSoVY8oSgyrG379a+DyinJ9lTqm5hPzEEPtJhtWarikzFXlmqAGxMBYNDFPoSUV/k3/K5w0kYmF8lU8YOMmhy4rkSN5JJuwGwoB1e/enMlvnlOaH/F0el60aFwAWzCm5mBhlOILXHTPCgnnXkTkQNau9JNyUj8leggUT9iUvaB2H+8O6TLKrdYUMv8OE/TKFwVjekYc9fumfG71X+YMpyYbEwIRNY4at2XlURJ2pe+8e1tUGgU1snhspX53eaEeTulC26zFFqatQ8d/36qnFFJ/TuU7/nFp1Bf/3e6mLnQGFXFk1KzrnZc7hlxxFlPOGCLuYck5RYBfVsrJxinlOGmEWl/c0niUBzFbkubCC1Zq8lrosl1td6nIEb8hcKx/kC3KsKEsMsTBa1zvVgMpYDMMkj7kWDWhd1obwyPRwaMULfU/JTC1izGu1RzI6Knsu0nrQJh/zKkyPrMmpc6PHgXFL361oVFl5FUBDZgw1OKPYneCzBk5yKC9laAQvaayiN2A9tYKaxk8oYFvmSA5aM8Ryj6tg9ej1cmyQR7kVQTiCSx6wwLgSmK8dmQNR09rL67YteWxgyWY7D6g4o9iDZmHppVcVSm8spCPajWRtn/tfOIq0sP+xUc7HQUmNSb2zp8YlVdI7qHps1BGY7T2lP5DXDVFY97Y8AAAAAElFTkSuQmCC">
+            </div>
+            <div class="row">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </center>
+        </div>
+
+        <div class="col-3">
+          <center>
+            <div class="row">
+              <img class="icon icons8-Money-Bag" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAABPtJREFUaAXtmVuIVVUYx8db5WSJkZaoWZSCgYMiUmbqSDfKLtKDJD1FL710IS3LHjQqKlGKCAoVEn2pHoKofJAEQ1G7CGlh0HgZDLK00sx7pf1+496y55zZc9ba54xnoPOH36y91/q+b31r77XWXodpamqo8QQaT+B/8QT61HCUg4l1A4wpYWzSRxtlV/yZtFdV1GogT5HFMjgB7bC3BG6brivhWu6bYR68Ab1Cc8niLEyLyEZbffStuyaRwSdwBo7ARgiVtvroawxj1U1OpQ0wBa6HUzAbKkkbbfXRdwMYq25aR88+2XStvcn1D9Af8mSbNtoqfY1hrLppMj2fhsVJBldSHobHkvuuCtu00VYtBmMYq66aS+9/wyvQF56D/TAISmWdbdpoq4++xugVupssDsHncB8cg7egtQTrbNNGW3307VVaRDZupzHo02t0CZmshHQAfhgrqR8GDsJppa8x6qrh9L4V0kH8zLVf61BNx1AfYxirLhpHr+3gIPbBQVgIsUofRjuOxrygmkhvJn4cnB6PggPyPFVEA3H6CIxp7AuiFnr5HTxWuJW+Cs/ADqhGrpv3wNj20aMaTXTn9FqYn1xfSvkZ1OIE67dlTRLXvnpELuJvYRtcBm3gm1AH4KGOq/I/71JlcqEagKHHFfuK2ThC4zctx/JXGAlTwLUxFDxquD7GQ1baPQI7YRe4jkZBiIZgtAfss6aaRbR/4fYk6gLKjcm1x28H4ltK9TIXHs+tz2LdSxCiWzD6B+y7JvKJu6iXZKJdwfU1yf1dlNkj+APcm/xf4LpZD5vhHXCXs+1BCNHrGNl3esAM8cm1WU3L93BxjsVs6v/ItH3Ktcn61pT+bq3qcbDNwYXIPu3bGFVpKt5OKcs8zaBhd6bxS65N1jejsgNxh3N6Om1CFZJDxViugw8qWnVeH29j70B+godhDaRvhMtCMgdzKaTpePk2xkV6u3acag5GXLB74EkYBUVkDuZiTtH6EA+/3kU0Aqdl4IJPB5QOyvqBECtzMacoDcb6JKTzPMo5Y+yacPG3wXZIB+UOFitzMSdzC9YcLH2aeTtVcCAMs4t9PvdOtVMQ+xvEXMzJ3MrUt6zmXMVMii/ADmN0OcYvQHp0KfVdSsVBuAg8FcTIXMzJ3MrUv6zmXIVH6bU5bd1V++qfBQe0D9xtsprKzVVwCH7JNgRef4XdPYG2HWa/8bfLVxgQ5HlsXAun4WP4GjwAug0fAdvy3hhN3cqczC1YZ7BsDbbubOh0XQhHIV3caXmYuqchb0rT1K1aaTW3YLmo7g227tqwmeoZsAW2wTQosu3idl7mZG5lylsjO7FsAbfOojqOo4vzfXCHKvxlxjeVOZlbsBZh+U1ifTXlimDP2hvatzkoczK3YI3A0h3oNvAX201QL9m3OZiLOZlblJZivReGJ14TKFcl127PfrVrLWMaW60C+1TmYC7mFC3n9Trwe3AnuJ5GgloCN8JoeAKUpffV1BnT2Mq+7NO+zcFczKmQPBa8Bh4r/CbcDFkN4eaOpMLS+2rqklAdhX3Zp32bQy2OS+d3sLME3A/uZi/C/RA9Z/EplTGMZUxj24d9ed0CFdWnokVnA+eq34Nbk3I8ZT/wK360G2jq+H/JoJzSs5e/N74Dt+lNSemAghQ7kNKgzVSMhWGQl2S6KRzDJm+wB2j7Efz2NNR4Ao0n0ANP4D/4LDZRsw7yIgAAAABJRU5ErkJggg==">
+            </div>
+            <div class="row">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="testimonials">
+          <hr>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-3">
+                <img class="testimonialimg" src="http://codex-themes.com/scalia/wp-content/uploads/2014/09/Faces-400x400px-1_1_18-scalia-testimonial.jpg">
+              </div>
+              <div class="col-9">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                <p>- Jane Doe</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <img class="testimonialimg" src="http://codex-themes.com/scalia/wp-content/uploads/2014/09/Faces-400x400px-1_1_18-scalia-testimonial.jpg">
+              </div>
+              <div class="col-9">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                <p>- Jane Doe</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <img class="testimonialimg" src="http://codex-themes.com/scalia/wp-content/uploads/2014/09/Faces-400x400px-1_1_18-scalia-testimonial.jpg">
+              </div>
+              <div class="col-9">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                <p>- Jane Doe</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-6">
+            <div class="row">
+              <div class="col-3">
+                <img class="testimonialimg" src="http://codex-themes.com/scalia/wp-content/uploads/2014/09/Faces-400x400px-1_1_18-scalia-testimonial.jpg">
+              </div>
+              <div class="col-9">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                <p>- Jane Doe</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <img class="testimonialimg" src="http://codex-themes.com/scalia/wp-content/uploads/2014/09/Faces-400x400px-1_1_18-scalia-testimonial.jpg">
+              </div>
+              <div class="col-9">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                <p>- Jane Doe</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <img class="testimonialimg" src="http://codex-themes.com/scalia/wp-content/uploads/2014/09/Faces-400x400px-1_1_18-scalia-testimonial.jpg">
+              </div>
+              <div class="col-9">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                <p>- Jane Doe</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Copyright Alejandro Herce A01021150</p>
+      </div>
+    </div>
+  </body>
+  </html>
