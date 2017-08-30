@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans|Kanit" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <style>
+  html {
+    font-family: 'Work Sans', sans-serif;
+  }
+  body {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/f9/2f/f2/f92ff22af32b9ba28b75637754f2e44a.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+  }
+  .container {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
+  header {
+    background: rgba(192, 192, 192, 0.8);
+    color: white;
+    line-height: 1.2;
+    opacity: 0.9;
+  }
+  header nav ul {
+    display: table;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: #2b2b2b;
+    line-height: 2.7;
+    text-transform: uppercase;
+    color: yellow;
+  }
+  header nav ul li {
+    display: table-cell;
+    width: auto;
+    text-align: center;
+  }
+  header nav ul li:hover {
+    color: #D63A76;
+  }
+  header nav ul li:last-child {
+    word-spacing: 30px;
+  }
+  header nav ul li:last-child i {
+    font-size: 40px;
+    vertical-align: middle;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background: #000000;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 13px;
+    line-height: 2;
+  }
+  .logo {
+    position: absolute;
+    height: 100px;
+    left: 12%;
+    top: 50px;
+    z-index: 1;
+  }
+  .title {
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .title .maintitle {
+    color: #D63A76;
+    text-shadow: grey 6px 6px 5px;
+  }
+  .title .yeartitle {
+    text-shadow: white 0px -4px;
+    transform: rotateZ(90deg) translateY(24px);
+    display: inline-block;
+    color: #000000;
+  }
+  .subtitle {
+    text-align: center;
+    margin-bottom: 24px;
+    transform: scaleX(1.1);
+    word-spacing: 4px;
+  }
+  .fa-facebook {
+    color: #3b5998;
+  }
+  .fa-twitter {
+    color: #1da1f2;
+  }
+  .main {
+    background: rgba(192, 192, 192, 0.6);
+  }
+  .main div {
+    float: left;
+  }
+  .main .boxes {
+    width: 20%;
+    perspective: 100px;
+    padding: 20px 0;
+  }
+  .main .boxes .box {
+    background: lightgrey;
+    border-style: double;
+    border-radius: 17px;
+    margin: 10px;
+    overflow: hidden;
+  }
+  .main .boxes .box h1 {
+    margin: 0;
+    background: black;
+    color: yellow;
+    text-align: center;
+    font-size: 16px;
+  }
+  .main .boxes .box p {
+    margin: 5px;
+  }
+  .main .boxes.left {
+    perspective-origin: right;
+  }
+  .main .boxes.left .box {
+    transform: scaleX(0.9) scaleY(0.9) translateX(15px) rotateY(7deg);
+  }
+  .main .boxes.right {
+    perspective-origin: left;
+  }
+  .main .boxes.right .box {
+    transform: scaleX(0.9) scaleY(0.9) translateX(-15px) rotateY(-7deg);
+  }
+  .main .cube {
+    height: 600px;
+    width: 60%;
+    perspective: 630px;
+  }
+  .main .cube .side {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+  .main .cube .side.up {
+    background: #000000;
+    color: white;
+    transform: translate(-50%, -50%) rotateX(-90deg) translateZ(-200px);
+  }
+  .main .cube .side.up p {
+    font-size: 29px;
+    margin: 0;
+    margin-top: 12px;
+  }
+  .main .cube .side.down {
+    background: #000000;
+    color: #D63A76;
+    opacity: 0.75;
+    transform: translate(-50%, -50%) rotateX(90deg) translateZ(-200px);
+  }
+  .main .cube .side.down p {
+    font-size: 55px;
+    margin: 0;
+    margin-top: 70px;
+  }
+  .main .cube .side.right {
+    background-image: url("http://dbr.fm/wp-content/uploads/2014/07/404377_10150493413796806_1914297833_n.jpg");
+    transform: translate(-50%, -50%) rotateY(-90deg) translateZ(-200px);
+  }
+  .main .cube .side.left {
+    background-image: url("http://www.billboard.com/files/media/04-Tiesto-at-tomorrowland-2016-billboard-1548.jpg");
+    transform: translate(-50%, -50%) rotateY(90deg) translateZ(-200px);
+  }
+  .main .cube .side.back {
+    background-image: url("https://i.ytimg.com/vi/aGirk03WXjo/maxresdefault.jpg");
+    transform: translate(-50%, -50%) translateZ(-200px);
+  }
+  .clearfix::after {
+  	content: "";
+  	display: table;
+  	clear: both;
+  }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <header class="clearfix">
+      <img class="logo" src="https://www.knijff.com/markmatters/wp-content/uploads/2015/01/tomorrowland_icon.png">
+      <div class="title">
+        <span class="maintitle">TOMORROWLAND</span>
+        <span class="yeartitle">17</span>
+      </div>
+      <div class="subtitle">
+        Music Fest, August 30, Tec CSF
+      </div>
+      <nav>
+        <ul class="clearfix">
+          <li>Home</li>
+          <li>Lineup</li>
+          <li>Schedule</li>
+          <li>Buy Tickets</li>
+          <li>Merchandise</li>
+          <li>Support</li>
+          <li>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main clearfix">
+      <div class="left boxes">
+        <div class="box">
+          <h1>Tickets</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="box">
+          <h1>VIP</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="box">
+          <h1>Camping</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="cube">
+        <div class="side up">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+        <div class="side right">
+        </div>
+        <div class="side down">
+          <p>The 1st Annual Tomorrowland Festival in Mexico</p>
+        </div>
+        <div class="side left">
+        </div>
+        <div class="side back">
+        </div>
+      </div>
+      <div class="right boxes">
+        <div class="box">
+          <h1>Merchandise</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="box">
+          <h1>Help</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="box">
+          <h1>Sponsors</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <footer>Copyright Alejandro Herce A01021150</footer>
+  </div>
+</body>
+</html>
