@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    font-family: "Arial", sans-serif;
+    background: #ECECEC;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+
+  .header {
+    flex-basis: 900px;
+    flex-grow: 3;
+    height: auto;
+  }
+
+  .nav {
+    flex-basis: 900px;
+    flex-grow: 3;
+    height: auto;
+    background: #F7CA18;
+    text-align: center;
+    color: #555;
+  }
+
+  .nav ul {
+    display: table;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav li {
+    display: table-cell;
+    width: auto;
+    padding: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .nav li:hover {
+    background: #F5D76E;
+  }
+
+  .content {
+    display: flex;
+    flex-basis: 480px;
+    flex-direction: row;
+    flex-grow: 2;
+    flex-wrap: wrap;
+  }
+
+  .content div {
+    box-sizing: border-box;
+    border: 3px solid white;
+  }
+
+  .content .title {
+    box-sizing: border-box;
+    flex-grow: 2;
+    width: 480px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .content .main-image {
+    flex-grow: 2;
+    width: 100%;
+  }
+
+  .content .image-left {
+    flex-grow: 1;
+    width: 240px;
+    height: 150px;
+    background: orange;
+  }
+
+  .content .image-right {
+    flex-grow: 1;
+    width: 240px;
+    height: 150px;
+    background: black;
+  }
+
+  .content .arrows {
+    box-sizing: border-box;
+    flex-grow: 2;
+    width: 480px;
+    height: 70px;
+    background: #fff;
+    text-align: center;
+  }
+
+  .content .arrows img {
+    flex-grow: 2;
+    width: 80px;
+    background: #fff;
+  }
+
+  .text-sidebar {
+    box-sizing: border-box;
+    flex-basis: 300px;
+    flex-grow: 1;
+    height: auto;
+    padding: 10px;
+    background: #F5D76E;
+    color: #333;
+    text-align: justify;
+  }
+
+  .footer {
+    box-sizing: border-box;
+    flex-basis: 600px;
+    flex-grow: 1;
+    order: 4;
+    height: auto;
+    background: #6C7A89;
+  }
+
+  @media (max-width: 480px) {
+    .content div {
+      border: 0px solid white;
+    }
+
+    .content .image-left {
+      flex-grow: 2;
+      order: 2;
+      width: 480px;
+      height: 300px;
+    }
+    .content .image-right {
+      flex-grow: 2;
+      order: 3;
+      width: 480px;
+      height: 300px;
+    }
+    .text-sidebar {
+      height: auto;
+    }
+    .nav {
+      order: 5;
+      height: auto;
+    }
+    .nav li {
+      float: none;
+    }
+    .content .arrows {
+      order: 4;
+    }
+    .footer {
+      order: 6;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://lumiere-a.akamaihd.net/v1/images/eu_marvel_spiderman_collection_header_r_73c5d12e.jpeg?region=0,0,1920,375" />
+    </div>
+    <div class="nav">
+      <ul>
+          <li>Menu</li>
+          <li>Menu 2</li>
+          <li>Menu 3</li>
+          <li>Menu 4</li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="title">
+        <p><b>The comic title goes here</b></p>
+      </div>
+      <div class="main-image">
+        <img src="http://nerdist.com/wp-content/uploads/2015/07/Deadpool-Coloring-Book-Header.jpg" />
+      </div>
+      <div class="image-left">
+        <img src="https://img.purch.com/o/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8xNTEvOTA3L2kwMi9Db2xvcl9Zb3VyX093bl9EZWFkcG9vbF9Db3Zlci5qcGc=" />
+      </div>
+      <div class="image-right">
+        <img src="https://img.purch.com/o/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8xODEvNjM1L2kwMi9TUEdXRU4yMDE2MDE2X0pvaG5zb25fVmFyLmpwZw==" />
+      </div>
+      <div class="arrows">
+        <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-arrows/006743-3d-transparent-glass-icon-arrows-arrow1-left-right1.png" />
+      </div>
+    </div>
+    <div class="text-sidebar">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum ante id dignissim consectetur. Etiam consequat diam diam, nec dapibus sapien luctus sit amet. Donec dapibus nunc ut nunc bibendum, efficitur porta neque dignissim. Aenean quis vestibulum neque. Donec convallis risus feugiat lectus gravida vulputate. Morbi vulputate lorem vitae lacinia consequat. Nam posuere, purus accumsan hendrerit fringilla, est leo commodo libero, in maximus lorem quam vitae arcu. Cras maximus erat elit, a dictum nisl fringilla eu.</p>
+      <p>Vestibulum faucibus vulputate lectus vel dapibus. Proin dapibus gravida metus sit amet placerat. Nam sit amet feugiat augue. Sed eu elit aliquet magna malesuada luctus a non mi. In vulputate nibh ac dui porta efficitur. Donec ut scelerisque lacus, a porttitor enim. Ut sit amet porttitor mi, sed faucibus sapien. Maecenas quis pretium diam, at varius risus.</p>
+    </div>
+    <div class="footer">
+      <center>
+        <p>Copyright Alejandro Herce A01021150</p>
+      </center>
+    </div>
+  </div>
+</body>
+</html>
