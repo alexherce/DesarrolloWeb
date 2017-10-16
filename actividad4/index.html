@@ -2,11 +2,43 @@
 <head>
 </head>
 <body>
+<div id="resultado"></div>
 <script>
 
-  var data = [1, 2, 3, 1, 2, 4, 5, 2, 3, 4];
+  var array = [1, 3, 2, 4, 1, 2, 4, 5, 4, 5, 1, 10, 11, 12, 13, 14];
 
-  
+  function buscaMayor() {
+    var seqLarga = [];
+    var temp = [];
+    var lastSeqPos = 0;
+
+    for (i = 0; i < array.length; i++) {
+      if (array[i] < lastSeqPos) {
+        temp = [];
+      }
+
+      temp.push(array[i]);
+      lastSeqPos = array[i];
+      if (temp.length > seqLarga.length)
+        seqLarga = temp;
+    }
+
+    var resultado = {
+      size: seqLarga.length,
+      array: seqLarga
+    };
+
+    return resultado;
+  }
+
+  function useless(callback) {
+    var div = document.getElementById('resultado');
+    div.innerHTML += "Resultado: " + JSON.stringify(callback());
+  }
+
+  useless(buscaMayor);
+
+  // QUE ES, DONDE LO ENCUENTRO Y COMO SE USA "ASSERT.JS"????????
 
 </script>
 </body>
